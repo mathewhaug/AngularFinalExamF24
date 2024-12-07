@@ -1,0 +1,33 @@
+<h2>Cat List</h2>
+<div class="card">
+<table >
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Age</th>
+    <th>Is Good Kitty</th>
+    <th>Picture</th>
+    <th>Details=</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!--Loop through the cats array and display the name, breed, and isGoodKitty -->
+  <tr *ngFor="let cat of cats">
+    <td>{{ cat.name }}</td>
+    <td>{{ cat.breed }}</td>
+    <td>{{cat.age}}</td>
+    <td>{{ cat.isGoodKitty ? 'Yes' : 'No' }}</td>
+    <td *ngIf="cat.picture; else elseBlock">
+      <img [src]="cat.picture[0]" alt="{{ cat.name }}" class="cat-image" />
+    </td>
+    <ng-template #elseBlock>
+      <td>No Picture :( </td>
+    </ng-template>
+    <!-- Link to the cat detail page -->
+    <td><a [routerLink]="['/catDetail', cat.id]" class="details-link">View Details</a></td>
+
+  </tr>
+  </tbody>
+</table>
+</div>

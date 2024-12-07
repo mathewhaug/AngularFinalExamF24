@@ -1,0 +1,75 @@
+/* Overall page style to center the content */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  min-height: 100vh; /* Take the full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+/* Card styling */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+/* Table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Table header style */
+table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* Image in the table */
+.cat-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+}
+
+/* Link styling */
+.details-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+/* Handle case when there's no picture */
+td {
+  text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1000px) {
+  table {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

@@ -1,0 +1,12 @@
+<h2>Cat Details</h2>
+<div *ngIf="cat" class="cat-card">
+  <h2>{{ cat.name }}'s Details</h2>
+  <p><strong>Breed:</strong> {{ cat.breed }}</p>
+  <p><strong>Age:</strong> {{ cat.age }}</p>
+  <p><strong>Is good Kitty?</strong> {{ cat.isGoodKitty ? 'Yes' : 'No' }}</p>
+
+  <h3>Image Gallery</h3>
+  <div class="gallery">
+    <img *ngFor="let image of cat.picture" [src]="image" alt="Cat Image" class="gallery-image" />
+  </div>
+</div>
